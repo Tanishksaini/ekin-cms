@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<layout width="1920" height="1080" bgcolor="#000" schemaVersion="4" enableStat="0"><region id="1" width="1920" height="1080" top="0" left="0" syncKey=""><options/><media id="1" schemaVersion="1" type="global" render="html" duration="1" useDuration="1" fromDt="1970-01-01 01:00:00" toDt="2038-01-19 03:14:07" enableStat="0"><options><updateInterval>43200</updateInterval></options><raw/></media></region><tags/></layout>

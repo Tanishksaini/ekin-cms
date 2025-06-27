@@ -28,7 +28,9 @@ use Xibo\Middleware\SuperAdminAuth;
 $app->get('/', ['\Xibo\Controller\User', 'home'])->setName('home');
 $app->get('/welcome', ['\Xibo\Controller\User', 'welcome'])->setName('welcome.view');
 
-//
+$app->post('/api/player/generateCode', \Xibo\Controller\PlayerRegistration::class . ':generateCode');
+$app->get('/api/player/getDetails/{user_code}', \Xibo\Controller\PlayerRegistration::class . ':getDetails');
+
 // Dashboards
 //
 $app->group('', function(RouteCollectorProxy $group) {

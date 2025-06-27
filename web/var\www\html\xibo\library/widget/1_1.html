@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Xibo Open Source Digital Signage</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=[[ViewPortWidth]]" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- Copyright 2006-2025 Xibo Signage Ltd. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <script type="text/javascript" src="[[PlayerBundle]]"></script>
+        <link href="[[FontBundle]]" rel="stylesheet">
+                <style type="text/css">
+            body {
+                margin: 0;
+                overflow: hidden;
+                font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+            }
+            h1, h2, h3, h4, p {
+                margin-top: 0;
+            }
+            #iframe {
+                border: 0;
+            }
+            .cycle-slide p, p.cycle-slide {
+                margin-bottom:0;
+            }
+        </style>
+            </head>
+    <body>
+        <div id="content"></div>
+            </body>
+    <script type="text/javascript">
+        var xiboICTargetId = 1;
+        xiboIC.setTargetId(xiboICTargetId);
+        window.globalOptions = {
+          originalWidth: 1920,
+          originalHeight: 1080,
+          totalDuration: 1,
+          cmsDateFormat: 'Y-m-d H:i',
+          locale: 'en-GB',
+        };
+        var widgetData = [];
+                widgetData.push({"widgetId":1,"templateId":null,"sample":null,"properties":[],"isValid":true,"isRepeatData":true,"duration":1,"calculatedDuration":1,"isDataExpected":false,"url":null,"data":null});
+        
+        var elements = [];
+                elements.push([{"elements":[{"id":"text","elementName":"","elementId":"element_text_156100","type":"global","left":530,"top":338,"width":847,"height":169,"layer":0,"rotation":0,"properties":{"text":"AA gya Ji aa gya layout\n","fontFamily":"","fontColor":"#f9f9f9","fitToArea":0,"useGradient":0,"gradient":"{\"type\":\"linear\",\"color1\":\"#222222\",\"color2\":\"#eee\",\"angle\":0}","fontSize":40,"lineHeight":1.2,"bold":0,"italics":0,"underline":0,"textWrap":1,"justify":0,"showOverflow":1,"textShadow":0,"textShadowColor":"","shadowX":1,"shadowY":1,"shadowBlur":2,"horizontalAlign":"center","verticalAlign":"center"},"isVisible":true,"effect":"noTransition","mediaName":"Text"}],"widgetId":1}]);
+            </script>
+    <script type="text/x-handlebars-template" id="hbs-text"
+            data-width=""
+            data-height=""
+            data-gap=""
+            data-extends-override=""
+            data-extends-with=""
+            data-escape-html="1"
+    ><div class="global-elements-text"
+    style="
+    display: -webkit-flex;
+    display: flex;
+    {{#if verticalAlign}}align-items: {{verticalAlign}};{{/if}}
+    {{#if fitToArea}}
+        white-space: nowrap;
+    {{else}}
+        {{#if fontSize}}font-size: {{fontSize}}px;{{/if}}
+        {{#if showOverflow}}overflow: visible;{{else}}overflow: hidden;{{/if}}
+        {{#if horizontalAlign}}
+            justify-content: {{horizontalAlign}};
+        {{/if}}
+        {{#eq horizontalAlign "flex-start"}}text-align: left;{{/eq}}
+        {{#eq horizontalAlign "center"}}text-align: center;{{/eq}}
+        {{#eq horizontalAlign "flex-end"}}text-align: right;{{/eq}}
+    {{/if}}
+    width: 100%; height: 100%;"
+>
+<div style="
+    {{#if fontFamily}}font-family: {{fontFamily}};{{/if}}
+    {{#if useGradient}}
+        {{parseJSON "gb" gradient}}
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent !important;
+        color: transparent;
+        {{#eq gb.type 'linear'}}
+            background-image: linear-gradient({{gb.angle}}deg, {{gb.color1}}, {{gb.color2}});
+        {{else}}
+            background-image: radial-gradient(circle, {{gb.color1}}, {{gb.color2}});
+        {{/eq}}
+    {{else}}
+        {{#if bold}}font-weight: bold;{{/if}}
+        {{#if italics}}font-style: italic;{{/if}}
+        {{#if underline}}text-decoration: underline;{{/if}}
+        {{#if fontColor}}color: {{fontColor}};{{/if}}
+        {{#if textShadow}}text-shadow: {{shadowX}}px {{shadowY}}px {{shadowBlur}}px {{textShadowColor}};{{/if}}
+    {{/if}}
+    {{#if lineHeight}}line-height: {{lineHeight}};{{/if}}
+    {{#if textWrap}}
+        white-space: break-spaces;
+        {{#if justify}}
+            text-align: justify;
+        {{/if}}
+    {{else}}
+        white-space: nowrap;
+    {{/if}}
+">{{#unless escapeHtml}}{{{text}}}{{else}}{{text}}{{/unless}}</div>
+</div></script>
+    <script type="text/javascript" id="onTemplateRender-text">
+        function onTemplateRender_text(id, target, items, properties, meta) {
+            if(properties.fitToArea) {
+    // Set target for the text
+    properties.fitTarget = 'div';
+
+    var $selector = $(target).is('.global-elements-text') ?
+        $(target) : $(target).find('.global-elements-text');
+
+    // Scale text to container
+    $selector.xiboTextScaler(properties);
+}
+        }
+    </script>
+    <!-- NUMITEMS=0 -->
+    <!-- DURATION=1 -->
+</html>
