@@ -3,7 +3,7 @@
 [![Github All Releases](https://img.shields.io/github/downloads/xibosignage/xibo-cms/total.svg)]()
 
 
-## About Xibo
+## About Clyra
 Xibo is a powerful Open Source Digital Signage platform with a web content management system and Windows display player
 software. We have commercial player options for Android, LG webOS and Samsung Tizen, as well as CMS hosting and support.
 
