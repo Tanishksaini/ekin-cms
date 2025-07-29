@@ -1,0 +1,21 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_REGION: ap-south-1
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+  build:
+    commands:
+      - echo Building Xibo web image...
+      - cd docker
+      - docker build -t ekin-cms -f web/Dockerfile .
+      - docker tag ekin-cms:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ekin-cms:latest
+  post_build:
+    commands:
+      - echo Pushing to ECR...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/ekin-cms:latest
