@@ -1705,10 +1705,10 @@ div.dataTables_wrapper div.dataTables_info {
 :root {
     --welcome-color-gray: #484848;
     --welcome-color-white: #ffffff;
-    --welcome-color-primary: #0e70f6;
-    --welcome-color-primary-hover: #5DA2FF;
-    --welcome-color-primary-alt: #1775f6;
-    --welcome-color-primary-dark: #0b5ac5;
-    --welcome-color-secondary: #eb7857;
-    --welcome-color-secondary-dark: #bc6046;
+    --welcome-color-primary: #679F9F;
+    --welcome-color-primary-hover: #5e8e8e;
+    --welcome-color-primary-alt: #679F9F;
+    --welcome-color-primary-dark: #679F9F;
+    --welcome-color-secondary: #679F9F;
+    --welcome-color-secondary-dark: #679F9F;
 }
