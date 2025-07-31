@@ -125,16 +125,16 @@ ul.sidebar .sidebar-list {
 ul.sidebar .sidebar-list a {
   text-indent: 16px;
   font-size: 1rem;
-  color: #b2bfdc;
+  color: #000;
   line-height: 24px;
 }
 ul.sidebar .sidebar-list a:hover {
-  color: #fff;
+  color: #2d2d2d;
   border-left: 3px solid #e99d1a;
   text-indent: 13px;
 }
 ul.sidebar .sidebar-list a.sidebar-list-selected {
-  color: #fff;
+  color: #2d2d2d;
   border-left: 3px solid #e99d1a;
   text-indent: 13px;
 }
@@ -163,12 +163,12 @@ ul.sidebar .sidebar-list a:hover .menu-icon {
   display: none;
 }
 .sidebar-footer div a {
-  color: #b2bfdc;
+  color: #000;
   font-size: 0.85rem;
   line-height: 43px;
 }
 .sidebar-footer div a:hover {
-  color: #ffffff;
+  color:#2d2d2d;
   text-decoration: none;
 }
 
@@ -196,9 +196,9 @@ ul.sidebar .sidebar-list a:hover .menu-icon {
 
 /* Header */
 .row.header {
-  height: 78px;
+  height: 85px;
   background: #679F9F;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   z-index: 1;
 }
 .row.header > div:last-child {
@@ -394,7 +394,7 @@ ul.sidebar .sidebar-list a:hover .menu-icon {
   margin-bottom: 10px;
 }
 .widget .widget-icon {
-  background: #30426a;
+  background: #679F9F;
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -453,7 +453,7 @@ ul.sidebar .sidebar-title a, ul.sidebar .sidebar-title a:hover {
 
 /* Horizontal Menu */
 .navbar-default {
-  background-color: #273759;
+  background-color:#679F9F;
   font-size: 1rem;
   padding: 0 8px;
   margin-bottom: 20px;
@@ -468,22 +468,22 @@ ul.sidebar .sidebar-title a, ul.sidebar .sidebar-title a:hover {
 }
 .navbar-default .navbar-nav>li>a {
   line-height: 49px;
-  color: #b2bfdc;
-  border-bottom: 1px solid #273759;
+  color: #000;
+  border-bottom: 1px solid #679FB6;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
   color: #fff;
-  background-color: #30426a;
+  background-color: #679F9F;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   color: #fff;
   border-bottom: 1px solid #e99d1a;
-  background-color: #30426a;
+  background-color: #679F9F;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   color: #fff;
   border-bottom: 1px solid #e99d1a;
-  background-color: #30426a;
+  background-color: #679F9F;
 }
 .notification-drawer-icon i {
   font-size: 1.4rem;
