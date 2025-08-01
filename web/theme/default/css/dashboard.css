@@ -82,7 +82,7 @@ ul.sidebar {
   bottom: 0;
 }
 ul.sidebar li a {
-  color: #fff;
+  color: #000;
   display: block;
   float: left;
   text-decoration: none;
@@ -127,7 +127,7 @@ ul.sidebar .sidebar-list {
 ul.sidebar .sidebar-list a {
   text-indent: 16px;
   font-size: 1rem;
-  color: #b2bfdc;
+  color: #000;
   line-height: 40px;
 }
 ul.sidebar .sidebar-list a:hover {
@@ -198,8 +198,8 @@ ul.sidebar .sidebar-list a:hover .menu-icon {
 
 /* Header */
 .row.header {
-  height: 60px;
-  background: #273759;
+  height: 80px;
+  background: #679F9F;
   margin-bottom: 15px;
   z-index: 1;
 }
@@ -240,14 +240,14 @@ ul.sidebar .sidebar-list a:hover .menu-icon {
 .row.header .user > .item > a {
   color: #cccccc;
   display: block;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .row.header .user > .item > a:hover {
   color: #f9f9f9;
 }
 .row.header .user-notif > .item > a {
   padding: 5px 0;
-  line-height: 49px;
+  line-height: 70px;
 }
 .row.header .user-notif > .item > i {
   font-size: 1.4rem;
@@ -256,7 +256,7 @@ ul.sidebar .sidebar-list a:hover .menu-icon {
 .row.header .user > .item img {
   width: 40px;
   height: 40px;
-  border-radius: 2px;
+  border-radius: 30px;
 }
 .row.header .user > .item a::after {
   display: none;
@@ -421,15 +421,15 @@ ul.sidebar .sidebar-main a,
 ul.sidebar .sidebar-list a:hover,
 #page-wrapper:not(.active) ul.sidebar .sidebar-title.separator {
   /* Sidebar header and footer color */
-  background: #273759;
+  background: #679FB8;
 }
 .sidebar-list a.sidebar-list-selected {
   /* Sidebar selected */
-  background: #2c3d63;
+  background: #679FB8;
 }
 #sidebar-wrapper {
   /* Sidebar background color */
-  background: #30426a;
+  background: #679F9F;;
 }
 ul.sidebar .sidebar-title {
   /* Sidebar title text colour */
@@ -442,7 +442,7 @@ ul.sidebar .sidebar-title {
 
 /* Horizontal Menu */
 .navbar-default {
-  background-color: #273759;
+  background-color: #679F9F;
   font-size: 1rem;
   padding: 0 8px;
   margin-bottom: 20px;
@@ -458,7 +458,7 @@ ul.sidebar .sidebar-title {
 .navbar-default .navbar-nav>li>a {
   line-height: 49px;
   color: #b2bfdc;
-  border-bottom: 1px solid #273759;
+  border-bottom: 1px solid #679F9F;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
   color: #fff;
